@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atom's Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    
+    
+<!--MAINSCREEN-->
+    <div class="fixed inset-0 flex items-center justify-center" id="modalEl">
+      <div class = "max-w-md w-full p-6 text-center">
+        <img src="Atom's Adventure.png" alt="">
+        
+        <h1 class="text-4xl font-bold leading-none text-white text-sm select-none" id=bigScoreEl>0</h1>
+        <p class="text-sm text-gray-700 select-none">High Score</p>
+        
+        <div>
+          <button class="btn btn1 bg-blue-500 text-white border-0 py-3 rounded-full select-none" id="startGameBtn">Start Game</button>
+          <button class="btn btn1 text-white select-none" id="optionsBtn">Options</button>
+          <button class="btn btn1 text-white select-none" id="aboutBtn">How To Play</button>
+          <button class="btn btn1 text-white select-none musicicon" id="musicBtn">&#9835</button>
+        </div>
+      </div>
+    </div>
+    <div class="fixed text-white text-sm ml-2 mt-1 select-none custom" id="scoreElEl"><span>Score: </span><span id="scoreEl">0</span></div>
+    <div class="items-center justify-center fixed text-white text-sm ml-2 mt-1 select-none custom"><p id="countdownTimer"></p></div>
+
+    
+
+    <div class="fixed inset-0 flex-none items-center justify-center" id="aboutModalEl">
+      <div class = "max-w-md w-full p-6 text-center border-normal">
+        <p class="text-sm2 text-gray-700 select-none">
+          Welcome to Atom's Adventure! You play as a blue particle that wanders around the night (controlled by mouse) and your job is to collect purple mana orbs that fall from the sky. 
+          At the same time, you must avoid red particles and collect mana before the timer (located on the top left) runs out. Every mana orb you collect will allow you to reset the timer.
+          The more mana you get, the higher your score (located on the top left). The higher your score, the more customization options you will unlock. Have fun! :D
+        </p>
+        <button class="btn btn1 text-white select-none" id="backBtn">Back</button>
+      </div>
+    </div>
+
+    <div class="fixed inset-0 flex-none items-center justify-center" id="optionsModalEl">
+      <div class = "max-w-md w-full p-6 text-center border-normal">
+        <p class="text-sm2 text-gray-700 select-none"><u>Unicorn Effect</u> (Reach a score of 5000 to unlock)</p>
+        <button class="btn btn1 text-white select-none" id="unicornEff">Equip</button>
+        <p class="text-sm2 text-gray-700 select-none"><u>Constellation Effect</u> (Reach a score of 10000 to unlock)</p>
+        <button class="btn btn1 text-white select-none" id="constellationEff">Equip</button>
+        <p class="text-sm2 text-gray-700 select-none">As you increase your score, you will begin to unlock more customization options for Atom! :D</p>
+        <button class="btn btn1 text-white select-none" id="backBtn2">Back</button>
+      </div>
+    </div>
+
+
+
+
+    <canvas id="canvas1"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
