@@ -23,7 +23,7 @@ audio5.loop = true;
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
-canvas.width = innerWidth - 20;
+canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 //setting up constants
@@ -269,7 +269,7 @@ function createManaParticles() {
   }
 }
 
-function handleParticles() {
+function handleParticles(particles_array, boolTrail, unicornBool) {
   for(let i = 0; i < particles_array.length; i++) {
     particles_array[i].update();
     particles_array[i].draw();
@@ -449,7 +449,7 @@ function animate() {
   createMountainRange(1, canvas.height - 50, "#384551");
   createMountainRange(2, canvas.height - 100, "#2B3843");
   createMountainRange(3, canvas.height - 300, "#26333e");
-  handleParticles();
+  handleParticles(particles_array, boolTrail, unicornBool);
   handleManaParticles();
   handleEnemyParticles();
   handleParticlesCollision()
